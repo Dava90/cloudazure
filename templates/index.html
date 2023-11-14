@@ -1,0 +1,23 @@
+<!-- templates/index.html-->
+{% extends "base.html" %}
+
+{% block content %}
+<header class="bg py-5">
+  <div class="container-fluid px-5 " >
+      <div class="row gx-5 align-items-center justify-content-center shadow-lg p-3 mb-5 rounded">
+          <div class="col-lg-8 col-xl-7 col-xxl-6">
+              <div class="my-5 text-center text-xl-start">
+                  <h1 class="display-5 fw-bolder mb-2">PYTHON BUG FIXER</h1>
+                  <hr>
+                  <p class="text-dark-50 mb-4">aplikasi web yang didevelop menggunakan framework web Flask. Tujuan dari aplikasi web ini adalah memberikan sebuah fungsi untuk memperbaiki bug pada kode Python. Aplikasi web ini memilik fitur history yang memungkinkan pengguna untuk melihat daftar submission kode sebelumnya dan kode yang diperbaiki yang dihasilkan, serta fitur delete yang memungkinkan pengguna untuk menghapus entri tertentu dari daftar history. Aplikasi web ini terhubung ke database MySQL untuk menyimpan dan mengambil data history. API OpenAI digunakan untuk memperbaiki bug pada kode yang disubmit.</p>
+                  <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-center ">
+                      <a class="btn btn-primary btn-lg px-4 me-sm-3" href="/tool">Lets Try</a>
+                       
+                  </div>
+              </div>
+          </div>
+          <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img src="{{ url_for('static',filename='img/logo.png')}}" id="logo" width="300px"/></div>
+      </div>
+  </div>
+</header>>
+{% endblock %}

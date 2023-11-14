@@ -1,0 +1,40 @@
+<!-- templates/history.html -->
+{% extends "base.html" %}
+
+{% block content %}
+
+  <h1>Histori Perbaikan Bug</h1>
+  {% if history %}
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Kode Sebelum</th>
+          <th>Kode Setelah</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in history %}
+          <tr>
+            <td>{{ item[0] }}</td>
+            <td>
+              <pre><code>{{ item[1] }}</code></pre>
+            </td>
+            <td>
+              <pre><code>{{ item[2] }}</code></pre>
+            </td>
+            <td>
+              <form method="POST" action="/delete-history">
+                <input type="hidden" name="id" value="{{ item[0] }}">
+                <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
+              </form>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <div class="alert alert-warning">Tidak ada histori perbaikan bug.</div>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,29 @@
+<!-- templates/tool.html -->
+{% extends "base.html" %}
+
+{% block content %}
+
+  <h1>Python Bug Fixer</h1>
+  
+  {% if error_message %}
+    <div class="alert alert-danger" role="alert">
+      {{ error_message }}
+    </div>
+  {% endif %}
+
+  <form method="POST" action="/fix-bugs" class="mb-3">
+    <div class="form-group">
+      <textarea style="height: 300px" class="form-control" name="code" placeholder="Masukkan kode yang akan diperbaiki"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Perbaiki Bug</button>
+  </form>
+  
+  {% if fixed_code %}
+    <div class="card mb-3">
+      <div class="card-header">Kode Setelah Diperbaiki</div>
+      <div class="card-body">
+        <pre><code>{{ fixed_code }}</code></pre>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}

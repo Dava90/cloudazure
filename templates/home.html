@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelompok 6 - Web Profile</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <style>
+        /* Your additional styles or overrides can be added here */
+    </style>
+</head>
+<body>
+
+     <div class="jumbotron">
+        <h2>Selamat Datang di Kelompok 6</h2>
+        <p>Ini adalah web profile kelompok kami.</p>
+    </div>
+
+    <section>
+
+        <div class="member">
+            <img src="{{url_for('static', filename='3.jpg')}}">
+            <h2>Ketua</h2>
+            <p>Aditya</p>
+            <a class="portfolio-link" href="/ketua_portofolio/">Lihat Portfolio</a>
+        </div>
+
+        <div class="member">
+            <img src="{{url_for('static', filename='2.jpg')}}">
+            <h2>Anggota 1</h2>
+            <p>Krisna A</p>
+            <a class="portfolio-link" href="/anggota1_portofolio/">Lihat Portfolio</a>
+        </div>
+
+        <div class="member">
+            <img src="{{url_for('static', filename='4.jpg')}}">
+            <h2>Anggota 2</h2>
+            <p>Dava</p>
+            <a class="portfolio-link" href="/anggota2_portofolio/">Lihat Portfolio</a>
+        </div>
+
+        <div class="member">
+            <img src="{{url_for('static', filename='1.jpeg')}}">
+            <h2>Anggota 3</h2>
+            <p>Afif F</p>
+            <a class="portfolio-link" href="/anggota3_portofolio/">Lihat Portfolio</a>
+        </div>
+    </section>
+
+
+</body>
+</html>
